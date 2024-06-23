@@ -1,0 +1,200 @@
+body{
+margin: 0;
+padding: 0;
+}
+
+:root {
+  --primary: #0077ff;
+  --secondary: #FE8800;
+  --light: #F5F5F5;
+  --dark: #14141F;
+}
+
+.bg-primary {
+  background: transparent !important;
+  transition: 0.5s ease;
+}
+.bg-primary.scrolled {
+  background: black !important;
+}
+
+
+/*** Service ***/
+.service-item {
+  box-shadow: 0 0 45px rgba(0, 0, 0, .08);
+  transition: .5s;
+}
+
+.service-item:hover {
+  background: var(--primary);
+}
+
+.service-item * {
+  transition: .5s;
+}
+
+.service-item:hover * {
+  color: var(--light) !important;
+}
+
+.service-pic{
+  height: 100px;
+  justify-content: center;
+  text-align: center;
+  margin-left: 30px;
+}
+
+.gallary {
+  padding-bottom: 50px;
+  margin-top: 100px;
+  background: white;
+  height: 100%;
+}
+.gallary .card {
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  cursor: pointer;
+}
+.gallary .card img {
+  border-radius: 10px;
+  transition: 0.5s;
+}
+.gallary .card img:hover {
+  transform: scale(1.1);
+}
+
+/*** Booking ***/
+.booking {
+  background: linear-gradient(rgba(46, 47, 49, 0.7), rgba(0, 15, 54, 0.7)), url(Asset/IMG/curug\ bromo.jpeg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+/* testimony */
+.imgbg:hover,
+.imgbg:hover .text-s {
+    filter: grayscale(0%);
+    transition: 0.5s ease;
+    color: white !important;
+    text-shadow: 4px 4px #1c1c1c;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.text-s {
+    text-decoration: none;
+    color: black;
+}
+
+.gone {
+    font-size: 200px;
+    top: 220px;
+    right: 50px;
+}
+
+.imgbg:hover .gone {
+    opacity: 0;
+    transition: 0.5s ease-in;
+}
+
+.outlineText {
+    font-family: "Londrina Outline", sans-serif;
+}
+
+.cardST {
+    min-height: 220px;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.star {
+    width: 15px;
+}
+
+.kuning {
+    filter: invert(89%) sepia(99%) saturate(2639%) hue-rotate(350deg) brightness(100%) contrast(106%);
+}
+
+.scroll-down {
+    height: 50px;
+    width: 30px;
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.scroll-down::before,
+.scroll-down::after {
+    content: "";
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    height: 20px;
+    width: 20px;
+    transform: translate(-50%, -100%) rotate(45deg);
+    border: 2px solid rgb(255, 255, 255);
+    border-top: transparent;
+    border-left: transparent;
+    animation: scroll-down 1s ease-in-out infinite;
+}
+
+.scroll-down::before {
+    top: 30%;
+    animation-delay: 0.3s;
+}
+
+@keyframes scroll-down {
+    0% {
+        opacity: 0;
+    }
+
+    30% {
+        opacity: 1;
+    }
+
+    60% {
+        opacity: 1;
+    }
+
+    100% {
+        top: 90%;
+        opacity: 0;
+    }
+}
+
+/* end */
+
+
+/* footer */
+footer{
+  padding-top: 100px;
+  background: black;
+}
+
+.social-links i {
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 20px;
+  background: white ;
+  color: black;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+.footer-bottom{
+  padding-top: 30px;
+  padding-bottom: 30px;
+  color: white
+
+}
+/* end */
+
+

@@ -1,0 +1,862 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="Asset/IMG/Dolphin (1).png">
+    <title>Dolphin Travelers|Muhamad Ali</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="Asset/CSS/style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Londrina+Outline&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+        integrity="sha384-4LISF5TTJX/fLmGSxO53rV4miRxdg84mZsxmO8Rx5jGtp/LbrixFETvWa5a6sESd" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Londrina+Outline&display=swap" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <style>
+        #hero {
+            height: 650px;
+            background-image: url(Asset/IMG/about.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+
+        #hero h1 {
+            text-decoration: double black;
+            text-shadow: 10px 2px 5px black;
+        }
+
+        #hero p {
+            text-decoration: double black;
+            text-shadow: 10px 2px 5px black;
+        }
+
+        .bg-biru {
+            background-color: #0077ff;
+        }
+
+        /* --- Start progress bar --- */
+
+        .process-wrapper {
+            margin: auto;
+            max-width: 1080px;
+        }
+
+        #progress-bar-container {
+            position: relative;
+            width: 90%;
+            margin: auto;
+            height: 100px;
+            margin-top: 65px;
+        }
+
+        #progress-bar-container ul {
+            padding: 0;
+            margin: 0;
+            padding-top: 15px;
+            z-index: 9999;
+            position: absolute;
+            width: 100%;
+            margin-top: -40px
+        }
+
+        #progress-bar-container li:before {
+            content: " ";
+            display: block;
+            margin: auto;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            border: solid 2px #aaa;
+            transition: all ease 0.3s;
+
+        }
+
+        #progress-bar-container li.active:before,
+        #progress-bar-container li:hover:before {
+            border: solid 2px #fff;
+
+            background: linear-gradient(to right, #0077ff 0%, #00a2ff 100%);
+        }
+
+        #progress-bar-container li {
+            list-style: none;
+            float: left;
+            width: 20%;
+            text-align: center;
+            color: #aaa;
+            text-transform: uppercase;
+            font-size: 11px;
+            cursor: pointer;
+            font-weight: 700;
+            transition: all ease 0.2s;
+            vertical-align: bottom;
+            height: 60px;
+            position: relative;
+        }
+
+        #progress-bar-container li .step-inner {
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+            font-size: 14px;
+        }
+
+        #progress-bar-container li.active,
+        #progress-bar-container li:hover {
+            color: #444;
+        }
+
+        #progress-bar-container li:after {
+            content: " ";
+            display: block;
+            width: 6px;
+            height: 6px;
+            background: #777;
+            margin: auto;
+            border: solid 7px #fff;
+            border-radius: 50%;
+            margin-top: 40px;
+            box-shadow: 0 2px 13px -1px rgba(0, 0, 0, 0.3);
+            transition: all ease 0.2s;
+
+        }
+
+        #progress-bar-container li:hover:after {
+            background: #0077ff;
+        }
+
+        #progress-bar-container li.active:after {
+            background: #207893;
+        }
+
+        #progress-bar-container #line {
+            width: 80%;
+            margin: auto;
+            background: #eee;
+            height: 6px;
+            position: absolute;
+            left: 10%;
+            top: 57px;
+            z-index: 1;
+            border-radius: 50px;
+            transition: all ease 0.9s;
+        }
+
+        #progress-bar-container #line-progress {
+            content: " ";
+            width: 3%;
+            height: 100%;
+            background: #207893;
+            background: linear-gradient(to right, #207893 0%, #2ea3b7 100%);
+            position: absolute;
+            z-index: 2;
+            border-radius: 50px;
+            transition: all ease 0.9s;
+        }
+
+        #progress-content-section {
+            width: 90%;
+            margin: auto;
+            background: #0077ff;
+            border-radius: 4px;
+        }
+
+        #progress-content-section .section-content {
+            padding: 30px 40px;
+            text-align: center;
+        }
+
+        #progress-content-section .section-content h2 {
+            font-size: 17px;
+            text-transform: uppercase;
+            color: white;
+            letter-spacing: 1px;
+        }
+
+        #progress-content-section .section-content p {
+            font-size: 16px;
+            line-height: 1.8em;
+            color: white;
+        }
+
+        #progress-content-section .section-content {
+            display: none;
+            animation: FadeInUp 700ms ease 1;
+            animation-fill-mode: forwards;
+            transform: translateY(15px);
+            opacity: 0;
+        }
+
+        #progress-content-section .section-content.active {
+            display: block;
+        }
+
+        @keyframes FadeInUp {
+            0% {
+                transform: translateY(15px);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateY(0px);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top bg-primary" data-bs-theme="dark">
+        <div class="container-fluid gap-4 mx-4">
+            <img src="/Asset/IMG/Dolphin-Photoroom.png-Photoroom.png" alt="" class="img" style="height: 50px;">
+            <a class="navbar-brand" href="#" id="logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+                aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-3 nav-underline">
+                    <li class="nav-item">
+                        <a class="nav-link  px-3 text-white border-3" aria-current="page" href="Index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active px-3 text-white" href="About.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-3 text-white" href="service.html">Service</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-3 text-white" href="Contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section class="" id="hero">
+        <div class="w-100 h-100 bg-black d-flex align-items-center justify-content-center bg-opacity-50">
+            <div class="text-white text-center pt-5 pb-8">
+                <h1 class="fw-bold text-uppercase" style="font-size: 60px;">Dolphin Travelers</h1>
+                <p class=" fw-bold text-primary" style="font-size: 40px;">About Us </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="Histori">
+        <h1 class="fw-bold text-center my-5 text-uppercase">
+            TimeLine
+        </h1>
+        <div class="process-wrapper">
+            <div id="progress-bar-container">
+                <ul>
+                    <li class="step step01 active">
+                        <div class="step-inner">2019</div>
+                    </li>
+                    <li class="step step02">
+                        <div class="step-inner">2020 - 2021</div>
+                    </li>
+                    <li class="step step03">
+                        <div class="step-inner">2022</div>
+                    </li>
+                    <li class="step step04">
+                        <div class="step-inner">202</div>
+                    </li>
+                    <li class="step step05">
+                        <div class="step-inner">2024</div>
+                    </li>
+                </ul>
+
+                <div id="line">
+                    <div id="line-progress"></div>
+                </div>
+            </div>
+
+            <div id="progress-content-section">
+                <div class="section-content discovery active text-light">
+                    <h2 class="pb-3"> Awal Berdiri</h2>
+                    <p>Dolphin Travelers didirikan dengan visi untuk menyediakan layanan perjalanan yang
+                        personal dan mendalam.
+                        Pada tahun pertama, perusahaan ini berhasil membangun basis pelanggan
+                        setia dengan menawarkan paket wisata yang unik dan berorientasi pada pengalaman lokal.</p>
+                </div>
+
+                <div class="section-content strategy">
+                    <h2 class="pb-3">Menghadapi Pandemi dan Pemulihan</h2>
+                    <p> Dolphin Travelers menghadapi tantangan besar akibat pandemi. Kami mengurangi operasional
+                        sementara dan menyesuaikan layanan untuk mematuhi protokol kesehatan.
+                        Perusahaan mengembangkan layanan digital, termasuk sistem pemesanan online
+                        yang lebih user-friendly dan kebijakan pembatalan yang lebih fleksibel.
+                        Mulai terjadinya peningkatan permintaan perjalanan domestik dan
+                        internasional pada akhir 2021.</p>
+                </div>
+
+                <div class="section-content creative">
+                    <h2 class="pb-3">Ekspansi dan Diversifikasi</h2>
+                    <p>Dolphin Travelers memperluas layanannya ke lebih banyak destinasi internasional dan
+                        memperkenalkan paket wisata tematik seperti ekowisata dan petualangan budaya.
+                        Meningkatkan kerjasama dengan operator lokal di berbagai
+                        negara untuk memperkaya portofolio wisata.</p>
+                </div>
+
+                <div class="section-content production">
+                    <h2 class="pb-3">Keberlanjutan dan Penghargaan</h2>
+                    <p>Dolphin Travelers semakin fokus pada keberlanjutan dan tanggung jawab sosial. Kami meluncurkan
+                        inisiatif lingkungan dan program kemitraan dengan komunitas lokal untuk mendukung pelestarian
+                        budaya dan lingkungan.
+                        Perusahaan mendapatkan pengakuan dari berbagai organisasi pariwisata dan
+                        penghargaan untuk praktik terbaik dalam industri travel.</p>
+                </div>
+
+                <div class="section-content analysis">
+                    <h2 class="pb-3"> Inovasi Berkelanjutan</h2>
+                    <p> Dolphin Travelers berencana untuk memperkenalkan lebih banyak solusi berbasis teknologi untuk
+                        meningkatkan kenyamanan dan kepuasan pelanggan, termasuk peningkatan sistem pemesanan dan
+                        melanjutkan ekspansi ke pasar baru yang potensial, memperluas cakupan geografis
+                        dan layanan, serta memperkenalkan lebih banyak paket wisata yang disesuaikan dengan kebutuhan
+                        pelanggan.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="min-vh-100">
+        <div class="container">
+            <div class="d-flex align-items-center min-vh-100">
+                <div class="card reveal shadow">
+                    <div class="card-body">
+                        <h2 class="text-center mb-4 fw-bold">Visi dan Misi Kami</h2>
+                        <div class="row">
+                            <div class="col-lg-6 col-none">
+                                <div class="card">
+                                    <img src="Asset/IMG/off-road-car-wilderness.jpg" alt="" class="w-100" />
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="accordion" id="accordionFlushExample">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button z-1 fw-bold" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne"
+                                                aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                                                VISI
+                                            </button>
+                                        </h2>
+                                        <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
+                                            data-bs-parent="#accordionFlushExample">
+                                            <div class="accordion-body">
+                                                <p>
+                                                    Menjadi perusahaan travel terkemuka yang memberikan pengalaman
+                                                    perjalanan yang tak terlupakan dengan layanan berkualitas tinggi dan
+                                                    kepuasan pelanggan yang optimal, serta menjadi pilihan utama
+                                                    ditingkat internasional.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed z-1 fw-bold" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo"
+                                                aria-expanded="false" aria-controls="flush-collapseTwo">
+                                                MISI
+                                            </button>
+                                        </h2>
+                                        <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                                            data-bs-parent="#accordionFlushExample">
+                                            <div class="accordion-body">
+                                                <p>
+                                                    Dolphin Travelers berkomitmen menyediakan layanan perjalanan
+                                                    berkualitas tinggi dan profesional, dengan fokus pada kepuasan
+                                                    pelanggan. Kami berinovasi dalam menciptakan paket perjalanan yang
+                                                    unik dan menarik, menawarkan harga kompetitif tanpa mengurangi
+                                                    kualitas, serta menjalin kerja sama yang kuat dengan
+                                                    berbagai pihak untuk memberikan layanan terbaik kepada pelanggan.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5">
+        <div class="bg-biru">
+            <div class="container text-white">
+                <h1 class="text-center fw-bold py-5">Kenapa Memilih Dolphin Travelers</h1>
+                <div class="row">
+                    <div class="col-lg-3 text-center py-2">
+                       <i class="bi bi-globe-central-south-asia" style="font-size: 50px;"></i>
+                        <div class="d-flex align-items-center justify-content-center h-50">
+                            <p class="fs-5">Pengalaman dan Profesionalisme</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 text-center  py-2">
+                        <i class="bi bi-heart-pulse-fill" style="font-size: 50px;"></i>
+                        <div class="d-flex align-items-center justify-content-center h-50">
+
+                            <p class="fs-5">Layanan Pelanggan yang Prima</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 text-center  p-2">
+                        <i class="bi bi-check-circle" style="font-size: 50px;"></i>
+                        <div class="d-flex align-items-center justify-content-center h-50">
+                            <p class="fs-5">Harga Kompetitif</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 text-center  p-2">
+                        <i class="bi bi-shield-shaded" style="font-size: 50px;"></i>
+                        <div class="d-flex align-items-center justify-content-center h-50">
+                            <p class="fs-5">Keamanan dan Kenyamanan</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- Testimonial Start -->
+    <section class="py-5" id="testy">
+        <div class="container">
+          <h1 class="fw-bold text-center my-5 text-uppercase">
+            Testimony Pelanggan
+          </h1>
+          <div class="card border-0">
+            <div class="Swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="card cardST">
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col-3">
+                          <img src="Asset/Testimony/IMG_20240623_085301.jpg" alt="" class="rounded-circle border img-fluid" />
+                        </div>
+                        <div class="col-9 p-0">
+                          <h5 class="card-title">Yuki Kato</h5>
+                          <div class="row m-0 py-0">
+                            <img src="Asset/IMG/STAR.png" alt="" class="star kuning p-0 mx-1" />
+                            <img src="Asset/IMG/STAR.png" alt="" class="star kuning p-0 mx-1" />
+                            <img src="Asset/IMG/STAR.png" alt="" class="star kuning p-0 mx-1" />
+                            <img src="Asset/IMG/STAR.png" alt="" class="star kuning p-0 mx-1" />
+                            <img src="Asset/IMG/STAR.png" alt="" class="star kuning p-0 mx-1" />
+                          </div>
+                        </div>
+                      </div>
+                      <p class="card-text my-2">
+                        "Sewa jeep di Dolphin Travel sangat praktis dan cepat. Mobilnya juga tangguh untuk jalanan yang
+                        menantang. Kami pasti akan kembali lagi untuk perjalanan berikutnya."
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="card cardST">
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col-3">
+                          <img src="Asset/Testimony/IMG_20240623_114153.jpg" alt="" class="rounded-circle border img-fluid" />
+                        </div>
+                        <div class="col-9 p-0">
+                          <h5 class="card-title">Tatjana Saphira</h5>
+                          <div class="row m-0">
+                            <img src="asset/img/STAR.png" alt="" class="star kuning p-0 mx-1" />
+                            <img src="asset/img/STAR.png" alt="" class="star kuning p-0 mx-1" />
+                            <img src="asset/img/STAR.png" alt="" class="star kuning p-0 mx-1" />
+                            <img src="asset/img/STAR.png" alt="" class="star kuning p-0 mx-1" />
+                            <img src="asset/img/STAR.png" alt="" class="star kuning p-0 mx-1" />
+                          </div>
+                        </div>
+                      </div>
+                      <p class="card-text my-2">
+                        "Liburan kami semakin seru dengan jeep dari Dolphin Travel. Sopirnya ramah dan berpengalaman,
+                        mobilnya pun terawat dengan baik. Recommended!"
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="card cardST">
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col-3">
+                          <img src="Asset/Testimony/aghniny-haque-300x300.jpg" alt="" class="rounded-circle border img-fluid" />
+                        </div>
+                        <div class="col-9 p-0">
+                          <h5 class="card-title">Aghniny Haque</h5>
+                          <div class="row m-0">
+                            <img src="asset/IMG/STAR.png" alt="" class="star kuning p-0 mx-1" />
+                            <img src="asset/IMG/STAR.png" alt="" class="star kuning p-0 mx-1" />
+                            <img src="asset/IMG/STAR.png" alt="" class="star kuning p-0 mx-1" />
+                            <img src="asset/IMG/STAR.png" alt="" class="star kuning p-0 mx-1" />
+                            <img src="asset/IMG/STAR.png" alt="" class="star p-0 mx-1" />
+                          </div>
+                        </div>
+                      </div>
+                      <p class="card-text my-2">
+                        "Pengalaman yang luar biasa! Mobil jeep dari Dolphin Travel sangat handal untuk perjalanan
+                        off-road
+                        kami. Proses pemesanannya juga mudah dan cepat."
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="card cardST">
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col-3">
+                          <img src="Asset/Testimony/prilly-latuconsina-300x300.jpg" alt="" class="rounded-circle border img-fluid" />
+                        </div>
+                        <div class="col-9 p-0">
+                          <h4 class="card-title">Prilly Latuconsina</h4>
+                          <div class="row m-0">
+                            <img src="asset/img/STAR.png" alt="" class="star kuning p-0 mx-1" />
+                            <img src="asset/img/STAR.png" alt="" class="star kuning p-0 mx-1" />
+                            <img src="asset/img/STAR.png" alt="" class="star kuning p-0 mx-1" />
+                            <img src="asset/img/STAR.png" alt="" class="star kuning p-0 mx-1" />
+                            <img src="asset/img/STAR.png" alt="" class="star p-0 mx-1" />
+                          </div>
+                        </div>
+                      </div>
+                      <p class="card-text my-2">
+                        "Jeep dari Dolphin Travel membuat perjalanan ke daerah terpencil jadi lebih menyenangkan. Mobilnya
+                        kuat dan nyaman, sangat cocok untuk petualangan kami."
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="card cardST">
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col-3">
+                          <img src="Asset/Testimony/ari-irham-2-300x300.jpg" alt="" class="rounded-circle border img-fluid" />
+                        </div>
+                        <div class="col-9 p-0">
+                          <h5 class="card-title">Ari Irham</h5>
+                          <div class="row m-0">
+                            <img src="asset/img/STAR.png" alt="" class="star kuning p-0 mx-1" />
+                            <img src="asset/img/STAR.png" alt="" class="star kuning p-0 mx-1" />
+                            <img src="asset/img/STAR.png" alt="" class="star kuning p-0 mx-1" />
+                            <img src="asset/img/STAR.png" alt="" class="star kuning p-0 mx-1" />
+                            <img src="asset/img/STAR.png" alt="" class="star kuning p-0 mx-1" />
+                          </div>
+                        </div>
+                      </div>
+                      <p class="card-text my-2">
+                        "Kami sangat puas dengan layanan Dolphin Travel. Jeep yang kami sewa sangat bersih dan dalam
+                        kondisi
+                        baik. Stafnya juga sangat membantu dan responsif."
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="card cardST">
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col-3">
+                          <img src="Asset/Testimony/bryan-domani-240x300.jpg" alt="" class="rounded-circle border img-fluid" />
+                        </div>
+                        <div class="col-9 p-0">
+                          <h5 class="card-title">Bryan Domani</h5>
+                          <div class="row m-0">
+                            <img src="asset/img/STAR.png" alt="" class="star kuning p-0 mx-1" />
+                            <img src="asset/img/STAR.png" alt="" class="star kuning p-0 mx-1" />
+                            <img src="asset/img/STAR.png" alt="" class="star kuning p-0 mx-1" />
+                            <img src="asset/img/STAR.png" alt="" class="star kuning p-0 mx-1" />
+                            <img src="asset/img/STAR.png" alt="" class="star kuning p-0 mx-1" />
+                          </div>
+                        </div>
+                      </div>
+                      <p class="card-text my-2">
+                        "Sangat merekomendasikan Dolphin Travel untuk sewa jeep! Mobilnya kuat dan tangguh, cocok untuk
+                        medan yang berat. Kami menikmati setiap momen perjalanan kami."
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="card cardST">
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col-3">
+                          <img src="Asset/Testimony/IMG_20240623_113851.jpg" alt="" class="rounded-circle border img-fluid" />
+                        </div>
+                        <div class="col-9 p-0">
+                          <h5 class="card-title">Refal Hady</h5>
+                          <div class="row m-0">
+                            <img src="asset/img/STAR.png" alt="" class="star kuning p-0 mx-1" />
+                            <img src="asset/img/STAR.png" alt="" class="star kuning p-0 mx-1" />
+                            <img src="asset/img/STAR.png" alt="" class="star kuning p-0 mx-1" />
+                            <img src="asset/img/STAR.png" alt="" class="star kuning p-0 mx-1" />
+                            <img src="asset/img/STAR.png" alt="" class="star kuning p-0 mx-1" />
+                          </div>
+                        </div>
+                      </div>
+                      <p class="card-text my-2">
+                        "Pelayanan yang sangat profesional dari Dolphin Travel. Jeepnya nyaman dan aman, membuat liburan
+                        kami lebih berkesan. Pasti akan menggunakan layanan ini lagi."
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="card cardST">
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col-3">
+                          <img src="Asset/Testimony/IMG_20240623_113738.jpg" alt="" class="rounded-circle border img-fluid" />
+                        </div>
+                        <div class="col-9 p-0">
+                          <h5 class="card-title">Angga Yunanda</h5>
+                          <div class="row m-0">
+                            <img src="asset/img/STAR.png" alt="" class="star kuning p-0 mx-1" />
+                            <img src="asset/img/STAR.png" alt="" class="star kuning p-0 mx-1" />
+                            <img src="asset/img/STAR.png" alt="" class="star kuning p-0 mx-1" />
+                            <img src="asset/img/STAR.png" alt="" class="star kuning p-0 mx-1" />
+                            <img src="asset/img/STAR.png" alt="" class="star kuning p-0 mx-1" />
+                          </div>
+                        </div>
+                      </div>
+                      <p class="card-text my-2">
+                        "Dolphin Travel benar-benar memenuhi ekspektasi kami. Jeepnya sangat andal dan nyaman untuk
+                        perjalanan jauh. Terima kasih atas layanannya yang luar biasa!"
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="card cardST">
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col-3">
+                          <img src="Asset/Testimony/IMG_20240623_113909.jpg" alt="" class="rounded-circle border img-fluid" />
+                        </div>
+                        <div class="col-9 p-0">
+                          <h5 class="card-title">Iqbaal Ramadhan</h5>
+                          <div class="row m-0">
+                            <img src="asset/img/STAR.png" alt="" class="star kuning p-0 mx-1" />
+                            <img src="asset/img/STAR.png" alt="" class="star kuning p-0 mx-1" />
+                            <img src="asset/img/STAR.png" alt="" class="star kuning p-0 mx-1" />
+                            <img src="asset/img/STAR.png" alt="" class="star kuning p-0 mx-1" />
+                            <img src="asset/img/STAR.png" alt="" class="star p-0 mx-1" />
+                          </div>
+                        </div>
+                      </div>
+                      <p class="card-text my-2">
+                        "Liburan kami ke pegunungan menjadi sangat seru berkat jeep dari Dolphin Travel. Kondisi mobilnya
+                        sangat baik dan stafnya sangat ramah. Sangat direkomendasikan!"
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-button-next "></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+          </div>
+      </section>
+      <!-- Testimonial End -->
+
+    <section id="team">
+        <section class="min-vh-100 d-flex align-items-center justify-content-center bg-biru bg-opacity-50">
+            <div class="container">
+              <h1 class="text-center fw-bold mb-5 text-light pt-5">Tim Kami</h1>
+              <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col">
+                  <div class="card h-100 shadow ">
+                    <img src="Asset/TEAM/Benny-1.jpeg" class= "card-img-top w-100" alt="">
+                    <div class="card-body">
+                      <h5 class="card-title text-center  fw-bold">Beny Fajarai </h5>
+                      <p class="card-text text-center ">Content Creator</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card h-100 shadow ">
+                    <img src="Asset/TEAM/iwa-jury-fransiska.jpg" class="card-img-top w-100" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title text-center  fw-bold"> Fransiska P.W. Hadiwidjana</h5>
+                      <p class="card-text text-center ">Travel Consultant</p>
+                    </div>            
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card h-100 shadow  ">
+                    <img src="Asset/TEAM/reynold_wijaya_modalku.jpg" class="card-img-top w-200" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title text-center  fw-bold">Reynold Wijaya</h5>
+                      <p class="card-text text-center ">Customer Service Specialistr</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </section>
+    </section>
+
+
+
+    <footer>
+        <div class="footer-top pb-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-1 pt-2 pl-5">
+                        <img src="Asset/IMG/Dolphin (1).png" alt="" class="img-fluid" style="height: 90px;">
+                    </div>
+                    <div class="col-lg-5">
+                        <h4 class="fw-bold text-uppercase text-white mt-3">Dolphin Travelers</h4>
+                        <p class="text-light">Dolphin Travelers adalah sebuah perusahan travel mobil jeep yang
+                            berkualitas dan memiliki kenyaman yang terjamin beserta fasilitasnya.</p>
+                        <div class="social-links">
+                            <a href=""><i class="fa fa-facebook"> </i></a>
+                            <a href=""><i class="fa fa-twitter"> </i></a>
+                            <a href=""><i class="fa fa-instagram"> </i></a>
+                            <a href=""><i class="fa fa-linkedin"> </i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 text-light">
+                        <h4 class="fw-bold text-uppercase text-white mt-3">Working Hours</h4>
+                        <div>
+                            <h6 class="fw-bold">Monday - Saturday</h6>
+                            <p>09:am - 09:pm</p>
+                        </div>
+                        <div>
+                            <h6 class="fw-bold">Sunday</h6>
+                            <p>We,re closed</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 text-light">
+                        <h4 class="fw-bold text-uppercase text-white mt-3">Contact</h4>
+                        <ul class="list-unstyled m-1">
+                            <li class="text-white mb-2">
+                                <i class="bi bi-geo-alt-fill mx-2"></i> 1319 Street City
+                            </li>
+                            <li class="text-white">
+                                <i class="bi bi-telephone-fill mx-2"></i> + 02 139 059 26
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom py-3 border-top border-white">
+            <div class="container ">
+                <div class="row justify-content-between ">
+                    <div class="col-auto ">
+                        <p>Copyrights @Dolphin Travelers. All Right reserved</p>
+                    </div>
+                    <div class="col-auto">
+                        <p>Designed by Muhamad Ali</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script>
+        $(window).scroll(function () {
+            $('nav').toggleClass('scrolled', $(this).scrollTop() > 600);
+        });
+        $(".step").click(function () {
+            $(this).addClass("active").prevAll().addClass("active");
+            $(this).nextAll().removeClass("active");
+        });
+
+        $(".step01").click(function () {
+            $("#line-progress").css("width", "3%");
+            $(".discovery").addClass("active").siblings().removeClass("active");
+        });
+
+        $(".step02").click(function () {
+            $("#line-progress").css("width", "25%");
+            $(".strategy").addClass("active").siblings().removeClass("active");
+        });
+
+        $(".step03").click(function () {
+            $("#line-progress").css("width", "50%");
+            $(".creative").addClass("active").siblings().removeClass("active");
+        });
+
+        $(".step04").click(function () {
+            $("#line-progress").css("width", "75%");
+            $(".production").addClass("active").siblings().removeClass("active");
+        });
+
+        $(".step05").click(function () {
+            $("#line-progress").css("width", "100%");
+            $(".analysis").addClass("active").siblings().removeClass("active");
+        });
+
+    </script>
+    <script type="module">
+      import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs'
+      const swiper = new Swiper(".Swiper", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        grabCursor: true,
+        loop: true,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        breakpoints: {
+          640: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+          },
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+          },
+        },
+      });
+    </script>
+    <script src="Asset/JS/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
