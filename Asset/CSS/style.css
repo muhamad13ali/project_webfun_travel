@@ -65,7 +65,7 @@ padding: 0;
 
 /*** Booking ***/
 .booking {
-  background: linear-gradient(rgba(46, 47, 49, 0.7), rgba(0, 15, 54, 0.7)), url(Asset/IMG/curug\ bromo.jpeg);
+  background: linear-gradient(rgba(46, 47, 49, 0.7), rgba(0, 15, 54, 0.7)), url(/Asset/IMG/curug\ bromo.jpeg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
